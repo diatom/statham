@@ -36,8 +36,16 @@ ifeq ($(OS), L)
 	copy /y "$(STATIC)"\* "$(TAR)" >nul
 else
 	mkdir -p "$(TAR)"
-	cp -r "$(STATIC)"/* "$(TAR)"
+	rsync -av --include='.well-known/' --include='.well-known/***' --exclude='.*' "$(STATIC)/" "$(TAR)/"
 endif
+# cp:
+# ifeq ($(OS), L)
+# 	if not exist "$(TAR)" mkdir "$(TAR)"
+# 	copy /y "$(STATIC)"\* "$(TAR)" >nul
+# else
+# 	mkdir -p "$(TAR)"
+# 	cp -r "$(STATIC)"/* "$(TAR)"
+# endif
 
 clean:
 ifeq ($(OS), L)

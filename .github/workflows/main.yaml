@@ -29,3 +29,4 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           publish_branch: pages
           publish_dir: ./target
+          keep_files: true
