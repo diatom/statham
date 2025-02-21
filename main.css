@@ -65,6 +65,10 @@ hey .greeting {
   margin: 2em 2em 1em 0;
   max-width: 40%;
 }
+hey .greeting span {
+  color: grey;
+  font-size: 0.8em;
+}
 hey .greeting h1 {
   font-size: 2em;
   margin: 0;
