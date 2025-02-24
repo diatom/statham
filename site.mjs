@@ -98,7 +98,7 @@ class PageIndex extends Page {
         E.hey.chi(
           E.div.props({class: `greeting`}).chi(
             E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
-            E.span.chi(`Последнее обновление: 21.02.2025`),
+            E.span.chi(`Последнее обновление: 24.02.2025`),
             E.h3.chi(`Цитата дня`),
             E.div.props({class: `today-quote`}).chi(``),
           ),
