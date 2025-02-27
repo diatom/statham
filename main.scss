@@ -63,6 +63,15 @@ header, footer, nav, a {
   display: flex;
   text-decoration: none;
 }
+.nav-head {
+  justify-content: space-between;
+  a {
+    margin: 0.5em;
+    color: grey;
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
 main {
   display: flex;
   width: 100%;
@@ -103,6 +112,20 @@ hey {
       padding: 0;
     }
   }
+  .img-sage {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    img {
+      border-radius: 10px;
+      width: auto;
+      max-width: 100%;
+      height: 30em;
+      object-fit: cover;
+    }
+  }
   .greeting {
     margin: 2em 2em 1em 0;
     max-width: 40%;
@@ -131,6 +154,10 @@ hey {
   .adult {
     margin: 2em 0;
   }
+}
+.hey-center {
+  justify-content: center;
+  min-height: 60vh;
 }
 .box-qoute {
   position: fixed;

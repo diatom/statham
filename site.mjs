@@ -86,19 +86,19 @@ class Page404 extends Page {
 class PageIndex extends Page {
   urlPath() {return `/`}
   fsPath() {return `index.html`}
-  title() {return `Главная`}
+  title() {return `Стетхем`}
 
   body() {
-  const tit = `Цитаты Стетхема `
+  const tit = `Цитаты Стетхема`
   const desc = `Сборник цитат Джейсона Стетхема`
   const img = `https://statham.fun/images/statham.png`
     return Layout(tit, desc, img,
-      // Nav(this),
+      Nav(this),
       E.main.chi(
         E.hey.chi(
           E.div.props({class: `greeting`}).chi(
             E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
-            E.span.chi(`Последнее обновление: 24.02.2025`),
+            E.span.chi(`Последнее обновление: 27.02.2025`),
             E.h3.chi(`Цитата дня`),
             E.div.props({class: `today-quote`}).chi(``),
           ),
@@ -134,13 +134,56 @@ function getItem(a) {
     })
 )
 }
+// Omar //
+class PageOmar extends Page {
+  urlPath() {return `/omarkhayam`}
+  fsPath() {return `omarkhayam.html`}
+  title() {return `Омар Хайям`}
 
+  body() {
+  const tit = `Омар Хайям`
+  const desc = `Омар Хайям – цитаты`
+  const img = `https://statham.fun/images/omar_khayyam_original.jpg`
+    return Layout(tit, desc, img,
+      Nav(this),
+      E.main.chi(
+        E.hey.props({class: `hey-center`}).chi(
+          E.div.props({class: `img-sage`}).chi(
+            E.img.props({src: `/images/omar_khayyam.jpg`, alt: `Omar Khayam`}),          ),
+        ),
+      ),
+      Footer(this)
+    )
+  }
+}
+// Confuciy //
+class PageConfuciy extends Page {
+  urlPath() {return `/confuciy`}
+  fsPath() {return `confuciy.html`}
+  title() {return `Конфуций`}
+
+  body() {
+  const tit = `Конфуций`
+  const desc = `Конфуций – цитаты`
+  const img = `https://statham.fun/images/confuciy.jpg`
+    return Layout(tit, desc, img,
+      Nav(this),
+      E.main.chi(
+        E.hey.props({class: `hey-center`}).chi(
+          E.div.props({class: `img-sage`}).chi(
+            E.img.props({src: `/images/confuciy.jpg`, alt: `Confuciy`}),          ),
+        ),
+      ),
+      Footer(this)
+    )
+  }
+}
 
 class Site extends a.Emp {
   constructor() {
     super()
     this.notFound = new Page404(this)
-    this.nav = [new PageIndex(this)]
+    this.nav = [new PageIndex(this), new PageOmar(this), new PageConfuciy(this)]
   }
   all() {return [this.notFound, ...this.nav]}  
 }
@@ -182,11 +225,13 @@ function Layout(tit, desc, img, ...chi) {
 
 function Nav(page) {
   return E.header.chi(
-    E.a.props({href: `/`, class: `logo`}).chi(E.img.props({src: `/images/ibri-logo-white.svg`, alt: `Ibri`})),
-    E.nav.chi(a.map(page.site.nav, PageLink), E.menu.chi(
-      getMenu()
-    )),
-    E.mobilemenu.chi(a.map(page.site.nav, PageLink)),
+    // E.a.props({href: `/`, class: `logo`}).chi(E.img.props({src: `/images/ibri-logo-white.svg`, alt: `Ibri`})),
+    E.nav.props({class: `nav-head`}).chi(a.map(page.site.nav, PageLink), 
+      // E.menu.chi(
+      //   getMenu()
+      // )
+    ),
+    // E.mobilemenu.chi(a.map(page.site.nav, PageLink)),
   )
 }
 function getMenu() {
