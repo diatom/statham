@@ -431,22 +431,6 @@ form input[type=checkbox]:checked + label {
   background-color: green;
 }
 
-::-webkit-scrollbar { /* width */
-  width: 10px;
-}
-
-::-webkit-scrollbar-track { /* Track */
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb { /* Handle */
-  background: black;
-}
-
-::-webkit-scrollbar-thumb:hover { /* Handle on hover */
-  background: black;
-}
-
 @media screen and (max-width: 1250px) {
   article, blog, cocktails, .content {
     width: 90%;
