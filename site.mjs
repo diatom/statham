@@ -98,7 +98,7 @@ class PageIndex extends Page {
         E.hey.chi(
           E.div.props({class: `greeting`}).chi(
             E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
-            E.span.chi(`Последнее обновление: 09.03.2025`),
+            E.span.chi(`Последнее обновление: 10.03.2025`),
             E.h3.chi(`Цитата дня`),
             E.div.props({class: `today-quote`}).chi(``),
           ),
@@ -107,6 +107,13 @@ class PageIndex extends Page {
             E.a.props({href: `https://drinkibri.ru/`, target: `_blank`}),
           ),
           E.div.props({class: `adult`}).chi(`18+`)
+        ),
+        E.div.props({class: `chat`}).chi(
+          E.input.props({type: `text`, id: `userInput`, placeholder: `Задай вопрос Стетхему`}),
+          E.button.props({onclick: `getResponse()`}).chi(`Спросить у Стетхема`),
+        ),
+        E.div.props({class: `chat`}).chi(
+          E.p.props({id: `response`}),
         ),
         E.div.props({class: `box-qoute`}).chi(
           E.div.props({class: `button-quote`}),
