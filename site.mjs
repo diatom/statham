@@ -99,6 +99,7 @@ class PageIndex extends Page {
           E.div.props({class: `greeting`}).chi(
             E.h1.chi(`Джейсон Стетхем — это великий русский поэт, а здесь его цитаты`),
             E.span.chi(`Последнее обновление: 14.03.2025`),
+            E.a.props({href: `https://pay.cloudtips.ru/p/61bbe89e`, class: `donate`}).chi(`Подкинуть ₽ Стетхему на стоник`),
             E.h3.chi(`Цитата дня`),
             E.div.props({class: `today-quote`}).chi(``),
           ),
@@ -156,7 +157,8 @@ class PageOmar extends Page {
       E.main.chi(
         E.hey.props({class: `hey-center`}).chi(
           E.div.props({class: `img-sage`}).chi(
-            E.img.props({src: `/images/omar_khayyam.jpg`, alt: `Omar Khayam`}),          ),
+            E.img.props({src: `/images/omar_khayyam.jpg`, alt: `Omar Khayam`}),          
+          ),
         ),
       ),
       Footer(this)
@@ -178,7 +180,8 @@ class PageConfuciy extends Page {
       E.main.chi(
         E.hey.props({class: `hey-center`}).chi(
           E.div.props({class: `img-sage`}).chi(
-            E.img.props({src: `/images/confuciy.jpg`, alt: `Confuciy`}),          ),
+            E.img.props({src: `/images/confuciy.jpg`, alt: `Confuciy`}),          
+          ),
         ),
       ),
       Footer(this)

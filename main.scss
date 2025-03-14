@@ -72,6 +72,17 @@ header, footer, nav, a {
     text-align: center;
   }
 }
+.donate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: grey;
+  font-size: 0.8em;
+  text-align: right;
+  margin: 0.5em;
+  display: block;
+  text-decoration: underline 1px grey;
+}
 main {
   display: flex;
   width: 100%;
@@ -558,6 +569,12 @@ form {
   }
 }
 @media screen and (max-width: 860px) {
+  .donate {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    margin: 2em 0;
+  }
   hey {
     width: 90%;
     margin-bottom: 0;
