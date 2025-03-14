@@ -15,3 +15,13 @@
 
 <!-- Yandex Webmaster -->
 <meta name="yandex-verification" content="d5a62848bcfac33f" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SN8QDEM5X7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SN8QDEM5X7');
+</script>
